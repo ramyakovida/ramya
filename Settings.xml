@@ -1,0 +1,43 @@
+<settings>
+	<mirrors>
+		<mirror>
+			<id>InfyArtifactory</id>
+			<mirrorOf>*</mirrorOf>
+			<url>https://infyartifactory.ad.infosys.com/artifactory/maven-central/</url>
+		</mirror>
+	</mirrors>
+
+	<profiles>
+		<profile>
+			<id>InfyArtifactory</id>
+			<repositories>
+				<repository>
+					<id>Central</id>
+					<url>http://central</url>
+					<releases><enabled>true</enabled></releases>
+					<snapshots><enabled>true</enabled></snapshots>
+				</repository>
+			</repositories>
+
+			<pluginRepositories>
+				<pluginRepository>
+					<id>Central</id>
+					<url>http://central</url>
+					<releases><enabled>true</enabled></releases>
+					<snapshots><enabled>true</enabled></snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            
+        </profile>
+	</profiles>
+
+	<activeProfiles>
+		<activeProfile>InfyArtifactory</activeProfile>
+	</activeProfiles>
+</settings>
